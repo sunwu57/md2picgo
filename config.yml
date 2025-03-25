@@ -1,0 +1,18 @@
+scan:
+  # 扫描路径 (建议使用正斜杠)
+  directory: "E:\\vitepress2\\Awesome-POC\\"
+  match: 
+    # 匹配Markdown文件的正则表达式
+    md_regex: ".*\\.md$"
+    # 匹配图片链接的正则表达式 - 修复捕获组范围
+    pic_regex: '!\[.*?\]\(((?!https?://|ftp://|data:)[./\w\d_-][^)]+?\.(?:png|jpg|jpeg|gif|webp|PNG|JPG|JPEG|GIF|WEBP)(?:[?#][^)]*?)?)\)'
+
+    # 扫描结果文件
+    result_filepath: "output.json"
+migrate:
+  # picgo相关配置
+  picgo:
+    # 上传地址
+    server_url: "http://127.0.0.1:36677/upload"
+# log:
+#   filepath: ./app.log
